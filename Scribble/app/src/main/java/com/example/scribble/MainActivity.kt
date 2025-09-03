@@ -248,7 +248,7 @@ class MainActivity : AppCompatActivity() {
             messi.text = "Dude...you're doing more than anyone else trust me. also don't forget who youre doing this for....MOM. We cant fail her. Also we need to look out for ourselves bro"
             adapter.notifyDataSetChanged()
         }
-        adapter.addMessage(Message(null, false, null,videoResId = R.raw.lv_0_20250829142247, null, false)
+        adapter.addMessage(Message(null, false, null,videoResId = R.raw.lv_0_20250829142247, null, false))
             buttonContainer.removeAllViews()
             inputLayout.visibility = View.VISIBLE
         }else {
