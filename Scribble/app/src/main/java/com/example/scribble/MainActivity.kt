@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     //Dynamic Buttons
     private lateinit var buttonContainer: LinearLayout
     private val messages = mutableListOf<Message>()
-    private lateinit var adapter: MessageAdapter
+	private lateinit var adapter: MessageAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -163,7 +163,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }else if(message.trim().lowercase() == "i love my physique"){
-                adapter.addMessage(Message(null, false, null, null, R.raw.motion))
                 buttonContainer.removeAllViews()
                 inputLayout.visibility = View.VISIBLE
     }
@@ -233,6 +232,25 @@ class MainActivity : AppCompatActivity() {
                     responses(response)
                 }
             }
+        }else if(message.trim().lowercase() == "no outreach replies"){
+	        val mess = Message("Typing...", false)
+	        adapter.addMessage(mess)
+	        lifecycleScope.launch{
+	            delay(3000)
+	            mess.text = "Cold calls: 1-3 people respond out of 100\n Cold emails: 5-20% open rate and 1-5% response out those opened email\nCold DMs 5-10% response rate and that only when personalised. 1% if not.\n\nThe reason you're doing in large volumes is to speed up success by getting the NOs out the way. So the more volume you do the quicker you achieve success. 
+	            adapter.notifyDataSetChanged()
+	        }
+	        
+	        val messi = Message("Typing...", false)
+        adapter.addMessage(mess)
+        lifecycleScope.launch{
+            delay(1000)
+            messi.text = "Dude...you're doing more than anyone else trust me. also don't forget who youre doing this for....MOM. We cant fail her. Also we need to look out for ourselves bro
+            adapter.notifyDataSetChanged()
+        }
+        adapter.addMessage(Message(null, false, videoResId = R.raw.lv_0_20250829142247, null, false)
+            buttonContainer.removeAllViews()
+            inputLayout.visibility = View.VISIBLE
         }else {
             for (option in options) {
                 val button = Button(this)
