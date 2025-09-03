@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">scribble</string>
+    <string name="hint_type_message">Type your Message...</string>
+    <string name="button_send">Send</string>
+</resources>
