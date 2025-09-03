@@ -1,0 +1,17 @@
+workflows:
+  android-workflow:
+    name: Android Build
+    max_build_duration: 60
+    scripts:
+      - name: Make gradlew executable
+        script: cd scribble && chmod +x gradlew
+
+      - name: Build Debug APK
+        script: cd scribble && ./gradlew assembleDebug
+
+      - name: Build Release APK
+        script: cd scribble && ./gradlew assembleRelease
+
+    artifacts:
+      - scribble/app/build/outputs/apk/debug/*.apk
+      - scribble/app/build/outputs/apk/release/*.apk
