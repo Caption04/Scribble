@@ -237,7 +237,7 @@ class MainActivity : AppCompatActivity() {
 	        adapter.addMessage(mess)
 	        lifecycleScope.launch{
 	            delay(3000)
-	            mess.text = "Cold calls: 1-3 people respond out of 100\n Cold emails: 5-20% open rate and 1-5% response out those opened email\nCold DMs 5-10% response rate and that only when personalised. 1% if not.\n\nThe reason you're doing in large volumes is to speed up success by getting the NOs out the way. So the more volume you do the quicker you achieve success. 
+	            mess.text = "Cold calls: 1-3 people respond out of 100\n Cold emails: 5-20% open rate and 1-5% response out those opened email\nCold DMs 5-10% response rate and that only when personalised. 1% if not.\n\nThe reason you're doing in large volumes is to speed up success by getting the NOs out the way. So the more volume you do the quicker you achieve success. "
 	            adapter.notifyDataSetChanged()
 	        }
 	        
@@ -245,10 +245,10 @@ class MainActivity : AppCompatActivity() {
         adapter.addMessage(mess)
         lifecycleScope.launch{
             delay(1000)
-            messi.text = "Dude...you're doing more than anyone else trust me. also don't forget who youre doing this for....MOM. We cant fail her. Also we need to look out for ourselves bro
+            messi.text = "Dude...you're doing more than anyone else trust me. also don't forget who youre doing this for....MOM. We cant fail her. Also we need to look out for ourselves bro"
             adapter.notifyDataSetChanged()
         }
-        adapter.addMessage(Message(null, false, videoResId = R.raw.lv_0_20250829142247, null, false)
+        adapter.addMessage(Message(null, false, null,videoResId = R.raw.lv_0_20250829142247, null, false)
             buttonContainer.removeAllViews()
             inputLayout.visibility = View.VISIBLE
         }else {
